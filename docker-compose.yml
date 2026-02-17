@@ -10,6 +10,9 @@ services:
     env_file:
       - .env.example
     volumes:
-      - ./server-files:/home/hytale/server-files
+      - hytale-server-data:/home/hytale/server-files
     stdin_open: true
     tty: true
+
+volumes:
+  hytale-server-data:
