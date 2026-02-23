@@ -8,11 +8,13 @@ services:
     ports:
       - 5520:5520/udp
     env_file:
-      - .env.example
+      - .env
     volumes:
       - hytale-server-data:/home/hytale/server-files
+      - hytale-server-backup:/home/hytale/server-files/backups
     stdin_open: true
     tty: true
 
 volumes:
   hytale-server-data:
+  hytale-server-backup:
